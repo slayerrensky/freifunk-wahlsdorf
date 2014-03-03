@@ -16,10 +16,10 @@ start() {
         batctl it 1000
         batctl gw server
         ifconfig wlan0 up
-        ifconfig br-lan4 up
         ifconfig bat0 up
+        ifconfig br-lan4 up
 }
                                            
 stop () {
-	batctl if del wlan0
+	batctl if del wlan0 br-lan4
 }

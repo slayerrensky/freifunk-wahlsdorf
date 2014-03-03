@@ -35,7 +35,7 @@ config InterfaceDefaults
 	option Mode 'mesh'
 
 config Interface
-	option ignore '0'
 	option interface 'freifunk'
 	option Mode 'mesh'
+	option ignore '1'
 

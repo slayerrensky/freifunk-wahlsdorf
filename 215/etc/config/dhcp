@@ -32,8 +32,9 @@ config dhcp
 	option ignore '1'
 
 config dhcp
-	option start '100'
-	option leasetime '12h'
-	option limit '150'
 	option interface 'lan4'
+	option start '100'
+	option limit '150'
+	option force '1'
+	option leasetime '1h'
 

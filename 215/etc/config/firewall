@@ -97,7 +97,7 @@ config zone
 	option forward 'REJECT'
 	option output 'ACCEPT'
 	option name 'batman'
-	option network 'batman freifunk'
+	option network 'freifunk lan4'
 
 config forwarding
 	option dest 'lan'

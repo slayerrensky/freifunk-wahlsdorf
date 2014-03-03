@@ -30,6 +30,7 @@ config Interface
 	option ignore '0'
 	option Mode 'mesh'
 	option interface 'freifunk'
+	option Weight '1'
 
 config InterfaceDefaults
 	option Mode 'mesh'

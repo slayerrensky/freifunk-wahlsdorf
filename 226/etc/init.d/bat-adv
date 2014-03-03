@@ -1,0 +1,24 @@
+#!/bin/sh /etc/rc.common
+# /etc/init.d/bat-adv
+# No fraggin' copyright
+# wlan0 = AP interface for associating clients
+# wlan0-1 = Ad-Hoc interface to transport payload
+# bat-br = Bridge with AP-interface and bat0 enslaved
+
+START=99
+
+start() {
+          batctl if add wlan0-1
+          ifconfig wlan0-1 mtu 1528
+#          brctl addbr bat-br
+#          brctl addif bat-br wlan0
+#          brctl addif bat-br bat0
+          batctl it 1000
+#          batctl gw server
+          ifconfig wlan0-1 up
+          ifconfig bat0 up
+}
+                                     
+stop () {
+          batctl if del wlan0-1
+}                                                           

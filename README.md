@@ -4,7 +4,8 @@ freifunk-wahlsdorf
 freifrunk wahlsdorf global settings
 
 
-Ordner | Beschreibung
-------- | ----------
-200 | Enthält Configurationen für einen Note mit Batman-adv + OLSR 
-215 | Enthält Configurationen für einen batman-adv DHCP Note + OLSR
+Ordner  | Beschreibung | Routing Protokolle
+------- | ------------ | ---------------
+200 | Configurationen  | Batman-adv + OLSR 
+215 | Configurationen  | batman-adv DHCP Note + OLSR
+226 | Configurationen  | batman-adv + OLSR

@@ -1,0 +1,42 @@
+
+config interface 'loopback'
+	option ifname 'lo'
+	option proto 'static'
+	option ipaddr '127.0.0.1'
+	option netmask '255.0.0.0'
+
+config interface 'lan'
+	option ifname 'eth0'
+	option type 'bridge'
+	option proto 'static'
+	option netmask '255.255.255.0'
+	option ipaddr '192.168.1.221'
+
+config interface 'wan'
+	option ifname 'eth1'
+	option proto 'dhcp'
+
+config interface 'freifunk'
+	option _orig_ifname 'wlan0-1'
+	option _orig_bridge 'false'
+	option proto 'static'
+	option netmask '255.255.255.0'
+	option dns '8.8.8.8'
+	option ipaddr '10.93.0.221'
+
+config interface 'wbat'
+	option _orig_ifname 'wlan0'
+	option _orig_bridge 'false'
+	option proto 'static'
+	option ipaddr '10.93.1.221'
+	option netmask '255.255.255.0'
+	option dns '8.8.8.8'
+	option type 'bridge'
+	option ifname 'bat0'
+
+config interface 'vbatadv'
+        option proto 'batadv'
+        option ifname '@freifunk'
+        option mesh 'bat0'
+                        
+

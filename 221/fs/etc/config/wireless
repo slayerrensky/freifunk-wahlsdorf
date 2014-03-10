@@ -1,0 +1,30 @@
+
+config wifi-device 'radio0'
+	option type 'mac80211'
+	option hwmode '11ng'
+	option path 'pci0000:00/0000:00:00.0'
+	option htmode 'HT20'
+	list ht_capab 'SHORT-GI-20'
+	list ht_capab 'SHORT-GI-40'
+	list ht_capab 'TX-STBC'
+	list ht_capab 'RX-STBC1'
+	list ht_capab 'DSSS_CCK-40'
+	option txpower '27'
+	option country 'US'
+	option channel '6'
+
+config wifi-iface
+	option device 'radio0'
+	option mode 'adhoc'
+	option encryption 'none'
+	option ssid 'wahlsdorf.freifunk.net'
+	option bssid 'BE:B0:34:F4:BE:BC'
+	option network 'freifunk'
+
+config wifi-iface
+	option device 'radio0'
+	option mode 'ap'
+	option encryption 'none'
+	option ssid 'wahlsdorf.de'
+	option network 'lan4 wbat'
+

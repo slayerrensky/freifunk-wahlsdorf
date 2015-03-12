@@ -1,0 +1,16 @@
+
+config service 'myddns'
+	option interface 'wan'
+	option service_name 'dyndns.org'
+	option force_interval '72'
+	option force_unit 'hours'
+	option check_interval '10'
+	option check_unit 'minutes'
+	option retry_interval '60'
+	option retry_unit 'seconds'
+	option ip_source 'web'
+	option ip_url 'http://checkip.dyndns.com/'
+	option domain 'rensky.dyndns.org'
+	option username 'rensky'
+	option password 'rotzbengel'
+

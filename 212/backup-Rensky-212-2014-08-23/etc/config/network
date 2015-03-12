@@ -1,0 +1,57 @@
+
+config interface 'loopback'
+	option ifname 'lo'
+	option proto 'static'
+	option ipaddr '127.0.0.1'
+	option netmask '255.0.0.0'
+
+config interface 'lan'
+	option ifname 'eth0.1'
+	option type 'bridge'
+	option proto 'static'
+	option netmask '255.255.255.0'
+	option ipaddr '192.168.1.212'
+
+config interface 'wan'
+	option ifname 'eth0.2'
+	option _orig_ifname 'eth0.2'
+	option _orig_bridge 'false'
+	option proto 'dhcp'
+
+config switch
+	option name 'eth0'
+	option reset '1'
+	option enable_vlan '1'
+
+config switch_vlan
+	option device 'eth0'
+	option vlan '1'
+	option ports '0t 2 3 4 5'
+
+config switch_vlan
+	option device 'eth0'
+	option vlan '2'
+	option ports '0t 1'
+
+config interface 'wireless0'
+	option dns '8.8.8.8 212.204.49.83 141.1.1.1'
+	option proto 'static'
+	option ipaddr '10.93.0.212'
+	option mtu '1528'
+	option netmask '255.255.255.0'
+
+config interface 'mesh12'
+	option type 'bridge'
+	option ifname 'bat12'
+	option _orig_ifname 'bat12 wlan0-1'
+	option _orig_bridge 'true'
+	option proto 'static'
+	option netmask '255.255.255.0'
+	option ipaddr '10.93.1.212'
+
+config interface 'meshbat12'
+	option ifname '@wireless0.12'
+	option proto 'batadv'
+	option mesh 'bat12'
+	option mtu '1528'
+

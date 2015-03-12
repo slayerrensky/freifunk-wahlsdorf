@@ -1,0 +1,4 @@
+
+config core 'general'
+	option leasetime '1'
+

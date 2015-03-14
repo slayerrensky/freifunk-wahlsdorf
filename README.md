@@ -6,6 +6,7 @@ freifrunk wahlsdorf global settings
 
 Ordner  | Beschreibung | Routing Protokolle
 ------- | ------------ | ---------------
-200 | Configurationen  | Batman-adv + OLSR 
-215 | Configurationen  | batman-adv DHCP Note + OLSR
-226 | Configurationen  | batman-adv + OLSR
+213 | wdr4300  | Batman-adv + OLSR + DHCP
+215 | 1043nd  | batman-adv DHCP Note + OLSR
+221 | NS M2 Loco  | Batman-adv + OLSR
+226 | wd703n  | batman-adv + OLSR

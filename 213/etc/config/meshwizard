@@ -1,0 +1,16 @@
+
+config netconfig 'netconfig'
+	option radio0_config '1'
+	option radio0_ip4addr '10.93.0.213'
+	option radio0_channel '6'
+	option radio0_dhcp '1'
+	option radio0_vap '1'
+	option radio0_dhcprange '6.0.213.1/24'
+
+config defaults 'ipv6'
+	option enabled '0'
+
+config general 'general'
+	option sharenet '0'
+	option localrestrict '1'
+

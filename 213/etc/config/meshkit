@@ -1,0 +1,4 @@
+config 'meshkit' 'update'
+	option 'profile' 'TLWDR4300'
+	option 'target' 'ar71xx_generic_20140301'
+	option 'url' 'http://rund.freifunk.net:8086/meshkit/default/api/json/buildimage'
